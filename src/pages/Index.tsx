@@ -6,11 +6,11 @@ import DeviceSync from '../components/DeviceSync';
 import GroupSession from '../components/GroupSession';
 
 const Index = () => {
-  // Mock data for demonstration
+  // Mock data for demonstration - with explicit types that match DeviceSync expectations
   const connectedDevices = [
-    { type: 'laptop', name: 'MacBook Pro', isActive: true },
-    { type: 'mobile', name: 'iPhone 13', isActive: false },
-    { type: 'tablet', name: 'iPad', isActive: false },
+    { type: 'laptop' as const, name: 'MacBook Pro', isActive: true },
+    { type: 'mobile' as const, name: 'iPhone 13', isActive: false },
+    { type: 'tablet' as const, name: 'iPad', isActive: false },
   ];
   
   const activeSession = {
